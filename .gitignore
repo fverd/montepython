@@ -6,8 +6,6 @@ core.*
 # Files created by mac
 *.DS_Store
 
-# Files created by runs
-chains/*
 
 # Compiled python files
 *.pyc

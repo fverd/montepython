@@ -1,0 +1,21 @@
+ param names	:  M_{wdm keV }  log10sigmaovermass
+ R-1 values	:  0.004638	 0.010878	
+ Best Fit  	:  3.026649e+00	-6.399259e+00	
+ mean      	:  2.947765e+00	-5.392797e+00	
+ sigma     	:  9.897966e-02	 1.626499e+00	
+
+ 1-sigma - 	: -4.573031e-02	-8.603255e-01	
+ 1-sigma + 	:  1.522290e-01	 2.392673e+00	
+ 2-sigma - 	:  nan	-2.345691e+00	
+ 2-sigma + 	:  nan	 2.392673e+00	
+ 3-sigma - 	:  nan	 nan	
+ 3-sigma + 	:  nan	 nan	
+
+ 1-sigma > 	:  2.902035e+00	-6.253123e+00	
+ 1-sigma < 	:  3.099994e+00	-3.000124e+00	
+ 2-sigma > 	:  nan	-7.738488e+00	
+ 2-sigma < 	:  nan	-3.000124e+00	
+ 3-sigma > 	:  nan	 nan	
+ 3-sigma < 	:  nan	 nan	
+ 95% > 	:  nan	 nan	
+ 95% < 	:  nan	 nan	

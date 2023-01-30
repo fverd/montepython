@@ -1,0 +1,4 @@
+info.to_plot=['log10aNR']
+info.ticksize=6
+info.ticknumber=10
+info.linesize=2

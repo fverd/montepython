@@ -1,0 +1,2 @@
+param names    	:  R-1        Best fit    mean        sigma       1-sigma -   1-sigma +   2-sigma -   2-sigma +   1-sigma >   1-sigma <   2-sigma >   2-sigma <   95% CL >    95% CL <   
+log10aNR       	:  3.2804e-01-7.1587e+00 -8.0145e+00  2.7855e-01 -4.8539e-01  7.1699e-02  nan  nan -8.4998e+00 -7.9428e+00  nan  nan  nan  nan

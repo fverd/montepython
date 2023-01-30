@@ -1,0 +1,21 @@
+ param names	:  log10aNR      
+ R-1 values	:  0.328043	
+ Best Fit  	: -7.158662e+00	
+ mean      	: -8.014450e+00	
+ sigma     	:  2.785464e-01	
+
+ 1-sigma - 	: -4.853937e-01	
+ 1-sigma + 	:  7.169909e-02	
+ 2-sigma - 	:  nan	
+ 2-sigma + 	:  nan	
+ 3-sigma - 	:  nan	
+ 3-sigma + 	:  nan	
+
+ 1-sigma > 	: -8.499844e+00	
+ 1-sigma < 	: -7.942751e+00	
+ 2-sigma > 	:  nan	
+ 2-sigma < 	:  nan	
+ 3-sigma > 	:  nan	
+ 3-sigma < 	:  nan	
+ 95% > 	:  nan	
+ 95% < 	:  nan	
