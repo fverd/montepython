@@ -1,0 +1,5 @@
+info.to_plot=['M_wdm_keV','log10sigmaovermass']
+info.ticksize=6
+info.ticknumber=10
+info.linesize=2
+info.posterior_smoothing=0
