@@ -1,2 +1,0 @@
-bsub "mpirun -n 4 python3 montepython/MontePython.py run -o chains/sidm-narrow-correctscale/ 
--c chains/sidm-narrow-correctscale/sidm-narrow-correctscale.covmat -f 1.2 --silent -N 30000"
