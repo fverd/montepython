@@ -1,0 +1,68 @@
+
+#------Experiments to test (separated with commas)-----
+# To see all the available ones, please look in the
+# montepython/likelihoods folder. Every folder there is a valid likelihood to
+# test.
+data.experiments=['canndm_Lya_abg']
+
+#------ Parameter list -------
+# data.parameters[class name] = [mean, min, max, 1-sigma, scale, role]
+# - if min max irrelevant, put to -1 or None (if you want a boundary of -1, use -1.0)
+# - if fixed, put 1-sigma to 0
+# - if scale irrelevant, put to 1, otherwise to the appropriate factor
+# - role is either 'cosmo', 'nuisance' or 'derived'
+
+#
+# Cosmological parameters list
+data.parameters['M_wdm_keV']   = [3.00, 2.7,3.1, 2 , 1,   'cosmo']
+data.parameters['log10sigmaovermass']   = [-5, -8,-3, 1 ,1,   'cosmo']
+
+
+#data.cosmo_arguments['selfinteraction'] = 'y'
+data.cosmo_arguments['ncdm_psd_parameters'] ='0.23, 0, 0.126 ,-1'
+data.cosmo_arguments['N_ncdm'] = 1
+
+data.cosmo_arguments['z_max_pk'] = 3.0
+data.cosmo_arguments['omega_ncdm'] = 0.12
+data.cosmo_arguments['omega_cdm'] = 0
+data.cosmo_arguments['gauge'] = 'newtonian'
+data.cosmo_arguments['output'] = 'mPk'
+data.cosmo_arguments['P_k_max_h/Mpc'] = 10.
+data.cosmo_arguments['N_ur'] = 3.05
+
+data.cosmo_arguments['tol_ncdm'] = 1.e-5
+data.cosmo_arguments['tol_ncdm_newtonian'] = 1.e-5
+data.cosmo_arguments['tol_ncdm_bg'] = 1.e-5
+data.cosmo_arguments['tol_perturbations_integration'] = 1.e-5
+data.cosmo_arguments['l_max_ncdm'] = 6
+data.cosmo_arguments['ncdm_fluid_approximation'] = 3
+
+
+# Nuisance paramters for Lya_abg
+data.parameters['T0a']               = [   0.74,  0.0,  2.0,   0.5,    1, 'nuisance']
+data.parameters['T0s']               = [  -4.38, -5.0,  5.0,    1.,    1, 'nuisance']
+data.parameters['gamma_a']           = [   1.45,  1.0,  1.7,   0.1,    1, 'nuisance']
+data.parameters['gamma_s']           = [  -1.93, -5.0,  5.0,    1.,    1, 'nuisance']
+data.parameters['Fz1']               = [   0.35, 0.22, 0.54,  0.05,    1, 'nuisance']
+data.parameters['Fz2']               = [   0.26, 0.15, 0.43,  0.05,    1, 'nuisance']
+data.parameters['Fz3']               = [   0.18, 0.07, 0.31,  0.05,    1, 'nuisance']
+data.parameters['Fz4']               = [   0.07, 0.024, 0.2,  0.05,    1, 'nuisance']
+data.parameters['F_UV']              = [    0.0,  0.0,  1.0,    1.,    1, 'nuisance']
+
+
+
+# Derived parameter list
+data.parameters['sigma8']          = [0, None, None, 0,     1,   'derived']
+data.parameters['z_reio']          = [1, None, None, 0,     1,   'derived']
+
+
+# Other cosmo parameters (fixed parameters, precision parameters, etc.)
+
+
+#------ Mcmc parameters ----
+# Number of steps taken, by default (overwritten by the -N command)
+data.N=10
+# Number of accepted steps before writing to file the chain. Larger means less
+# access to disc, but this is not so much time consuming.
+data.write_step=5
+

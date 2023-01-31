@@ -1,0 +1,9 @@
+#------Experiments to test (separated with commas)-----
+# To see all the available ones, please look in the
+# montepython/likelihoods folder. Every folder there is a valid likelihood to
+# test.
+data.experiments=['hst']
+
+data.parameters['h'] = [0.8, 0, None, 1, 1, 'cosmo']
+data.N=10
+data.write_step=5

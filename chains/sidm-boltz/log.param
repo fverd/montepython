@@ -1,0 +1,117 @@
+#-----CLASS v3.2.0 (branch: garanni, hash: a1b8672f362d28374b1f24fda366f81e2d6ccc4d)-----
+
+
+#------Experiments to test (separated with commas)-----
+# To see all the available ones, please look in the
+# montepython/likelihoods folder. Every folder there is a valid likelihood to
+# test.
+data.experiments=['canndm_Lya_abg']
+
+#------ Parameter list -------
+# data.parameters[class name] = [mean, min, max, 1-sigma, scale, role]
+# - if min max irrelevant, put to -1 or None (if you want a boundary of -1, use -1.0)
+# - if fixed, put 1-sigma to 0
+# - if scale irrelevant, put to 1, otherwise to the appropriate factor
+# - role is either 'cosmo', 'nuisance' or 'derived'
+
+#
+# Cosmological parameters list
+data.parameters['M_wdm_keV']   = [3, 1.5,6, 2 ,1,   'cosmo']
+data.parameters['log10sigmaovermass']   = [-5, -8,-2, 3 ,1,   'cosmo']
+
+
+#data.cosmo_arguments['selfinteraction'] = 'y'
+data.cosmo_arguments['ncdm_psd_parameters'] ='0.23, 0, 0.126 ,-1'
+data.cosmo_arguments['N_ncdm'] = 1
+
+data.cosmo_arguments['z_max_pk'] = 3.0
+data.cosmo_arguments['omega_ncdm'] = 0.12
+data.cosmo_arguments['omega_cdm'] = 0
+data.cosmo_arguments['gauge'] = 'newtonian'
+data.cosmo_arguments['output'] = 'mPk'
+data.cosmo_arguments['P_k_max_h/Mpc'] = 10.
+data.cosmo_arguments['N_ur'] = 3.05
+
+data.cosmo_arguments['tol_ncdm'] = 1.e-6
+data.cosmo_arguments['tol_ncdm_newtonian'] = 1.e-6
+data.cosmo_arguments['tol_ncdm_bg'] = 1.e-6
+data.cosmo_arguments['tol_perturbations_integration'] = 1.e-5
+data.cosmo_arguments['l_max_ncdm'] = 15
+data.cosmo_arguments['ncdm_fluid_approximation'] = 2
+
+
+# Nuisance paramters for Lya_abg
+data.parameters['T0a']               = [   0.74,  0.0,  2.0,   0.5,    1, 'nuisance']
+data.parameters['T0s']               = [  -4.38, -5.0,  5.0,    1.,    1, 'nuisance']
+data.parameters['gamma_a']           = [   1.45,  1.0,  1.7,   0.1,    1, 'nuisance']
+data.parameters['gamma_s']           = [  -1.93, -5.0,  5.0,    1.,    1, 'nuisance']
+data.parameters['Fz1']               = [   0.35, 0.22, 0.54,  0.05,    1, 'nuisance']
+data.parameters['Fz2']               = [   0.26, 0.15, 0.43,  0.05,    1, 'nuisance']
+data.parameters['Fz3']               = [   0.18, 0.07, 0.31,  0.05,    1, 'nuisance']
+data.parameters['Fz4']               = [   0.07, 0.024, 0.2,  0.05,    1, 'nuisance']
+data.parameters['F_UV']              = [    0.0,  0.0,  1.0,    1.,    1, 'nuisance']
+
+
+
+# Derived parameter list
+data.parameters['sigma8']          = [0, None, None, 0,     1,   'derived']
+data.parameters['z_reio']          = [1, None, None, 0,     1,   'derived']
+
+
+# Other cosmo parameters (fixed parameters, precision parameters, etc.)
+
+
+#------ Mcmc parameters ----
+# Number of steps taken, by default (overwritten by the -N command)
+data.N=10
+# Number of accepted steps before writing to file the chain. Larger means less
+# access to disc, but this is not so much time consuming.
+data.write_step=5
+
+
+
+#-----Likelihood-canndm_Lya_abg-----
+canndm_Lya_abg.data_directory = '/NFS/home/verdiani/montepython/data'
+canndm_Lya_abg.bin_file_name = 'Lya_bin_file.txt'
+canndm_Lya_abg.DATASET = 'mike-hires'
+canndm_Lya_abg.zp = 4.5
+canndm_Lya_abg.num_z_XQ = 7
+canndm_Lya_abg.num_z_overlap = 1
+canndm_Lya_abg.grid_file = 'Lya_grid/ABG_fullgrid+LCDM.dat'
+canndm_Lya_abg.grid_size = 142
+canndm_Lya_abg.astro_spectra_file = 'Lya_grid/full_matrix_interpolated_ASTRO.pkl'
+canndm_Lya_abg.abg_spectra_file = 'Lya_grid/full_matrix_interpolated_ABG.pkl'
+canndm_Lya_abg.abg_grid_file = 'Lya_grid/kriging_GRID_2R_ABG+WDM.dat'
+canndm_Lya_abg.abg_astro_grid_file = 'Lya_grid/kriging_GRID_2R_astro_18p_HR_noPRACE.dat'
+canndm_Lya_abg.MIKE_spectra_file = 'Lya_grid/y_M_reshaped.pkl'
+canndm_Lya_abg.HIRES_spectra_file = 'Lya_grid/y_H_reshaped.pkl'
+canndm_Lya_abg.MIKE_cov_file = 'Lya_grid/cov_M_inverted.pkl'
+canndm_Lya_abg.HIRES_cov_file = 'Lya_grid/cov_H_inverted.pkl'
+canndm_Lya_abg.PF_noPRACE_file = 'Lya_grid/PF_noPRACE.pkl'
+canndm_Lya_abg.num_sim_thermal = 8
+canndm_Lya_abg.epsilon = 1e-08
+canndm_Lya_abg.exponent = 6.0
+canndm_Lya_abg.alpha_min = 0.0
+canndm_Lya_abg.alpha_max = 0.17
+canndm_Lya_abg.beta_min = 1.5
+canndm_Lya_abg.beta_max = 10.0
+canndm_Lya_abg.gamma_min = -10.0
+canndm_Lya_abg.gamma_max = -0.15
+canndm_Lya_abg.use_nuisance = ['T0a', 'T0s', 'gamma_a', 'gamma_s', 'Fz1', 'Fz2', 'Fz3', 'Fz4', 'F_UV']
+canndm_Lya_abg.k_s_over_km = 0.009
+canndm_Lya_abg.z = 3.0
+canndm_Lya_abg.kmax = 50.0
+canndm_Lya_abg.kmin = 0.01
+canndm_Lya_abg.k_size = 500
+
+
+#-----------Cosmological-arguments---------
+data.cosmo_arguments.update({'ncdm_psd_parameters': '0.23, 0, 0.126 ,-1', 'N_ncdm': 1, 'z_max_pk': 3.0, 'omega_ncdm': 0.12, 'omega_cdm': 0, 'gauge': 'newtonian', 'output': 'mPk', 'P_k_max_h/Mpc': 75.0, 'N_ur': 3.05, 'tol_ncdm': 1e-06, 'tol_ncdm_newtonian': 1e-06, 'tol_ncdm_bg': 1e-06, 'tol_perturbations_integration': 1e-05, 'l_max_ncdm': 15, 'ncdm_fluid_approximation': 2})
+
+
+#--------Default-Configuration------
+data.path['root']	= '/NFS/home/verdiani/montepython'
+data.path['MontePython']	= '/NFS/home/verdiani/montepython/montepython'
+data.path['data']	= '/NFS/home/verdiani/montepython/data'
+data.path['cosmo']	= '/home/verdiani/class'
+data.path['clik']	= '/home/verdiani/planck/code/plc_3.0/plc-3.01'
