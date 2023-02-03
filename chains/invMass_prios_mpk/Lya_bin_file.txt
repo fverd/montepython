@@ -1,0 +1,1 @@
+# inv_M_wdm_keV	 log10sigmaovermass	 T0a	 T0s	 gamma_a	 gamma_s	 Fz1	 Fz2	 Fz3	 Fz4	 F_UV	 sigma8	 z_reio	

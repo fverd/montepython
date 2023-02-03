@@ -857,6 +857,13 @@ class Data(object):
                 self.cosmo_arguments['m_ncdm']= (self.cosmo_arguments[elem])*1000
                 del self.cosmo_arguments[elem]
 
+            if elem == 'inv_M_wdm_keV': 
+                mass=1/self.cosmo_arguments[elem]
+                self.cosmo_arguments['aNR'] = 1.68e-7*mass**(-4/3)
+                self.cosmo_arguments['T_ncdm']= 0.16*(mass)**(-1./3.)
+                self.cosmo_arguments['m_ncdm']= (mass)*1000
+                del self.cosmo_arguments[elem]
+
             if elem == 'log10sigmaovermass': 
                 self.cosmo_arguments['sigmaovermass'] = 10**self.cosmo_arguments[elem]
                 del self.cosmo_arguments[elem]
