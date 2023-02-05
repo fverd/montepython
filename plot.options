@@ -1,5 +1,8 @@
-info.to_plot=['M_wdm_keV','log10sigmaovermass']
-info.ticksize=6
-info.ticknumber=10
-info.linesize=2
+#info.to_change={'M_wdm_keV':'M_wdm','log10sigmaovermass':'\log_10} \sigma/M'}
+#info.to_plot=['M_wdm','\log_10} \sigma/M']
+
+info.to_plot=['inv_M_wdm_keV','log10sigmaovermass']
+info.ticksize=8
+info.ticknumber=8
+info.linesize=1.5
 info.posterior_smoothing=0

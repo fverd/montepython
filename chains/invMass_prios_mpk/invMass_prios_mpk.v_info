@@ -1,0 +1,3 @@
+param names    	:  R-1        Best fit    mean        sigma       1-sigma -   1-sigma +   2-sigma -   2-sigma +   1-sigma >   1-sigma <   2-sigma >   2-sigma <   95% CL >    95% CL <   
+inv_{M wdm keV }	:  2.6716e-01 7.4198e-02  1.4245e-01  nan  nan  nan  nan  nan  nan  nan  nan  nan  nan  nan
+log10sigmaovermass	:  3.7128e-01-5.0087e+00 -5.3575e+00  nan  nan  nan  nan  nan  nan  nan  nan  nan  nan  nan
