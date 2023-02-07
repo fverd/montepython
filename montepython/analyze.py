@@ -609,9 +609,9 @@ def compute_posterior(information_instances):
                 # TB: A nice option when turning off posterior_smoothing is to turn on the following
                 # two lines of code
                 # smooth
-                #smoothed_interp_hist = scipy.ndimage.filters.gaussian_filter(info.interp_hist,sigma)
+                smoothed_interp_hist = scipy.ndimage.filters.gaussian_filter(info.interp_hist,sigma)
                 # re-normalised
-                #smoothed_interp_hist = smoothed_interp_hist/smoothed_interp_hist.max()
+                smoothed_interp_hist = smoothed_interp_hist/smoothed_interp_hist.max()
 
                 if conf.plot_2d and conf.plot_diag:
 
@@ -756,9 +756,9 @@ def compute_posterior(information_instances):
                         #
                         # TB: if no posterior_smoothing uncomment the next two lines of code
                         # smooth
-                        #smoothed_interp_lkl_mean = scipy.ndimage.filters.gaussian_filter(interp_lkl_mean,sigma)
+                        smoothed_interp_lkl_mean = scipy.ndimage.filters.gaussian_filter(interp_lkl_mean,sigma)
                         # re-normalised
-                        #smoothed_interp_lkl_mean = smoothed_interp_lkl_mean/smoothed_interp_lkl_mean.max()
+                        smoothed_interp_lkl_mean = smoothed_interp_lkl_mean/smoothed_interp_lkl_mean.max()
 
                         # Execute some customisation scripts for the 1d plots
                         if (info.custom1d != []):

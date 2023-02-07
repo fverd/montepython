@@ -1,0 +1,5 @@
+python3 montepython/MontePython.py run 
+ -p chains/invMass_prios_mpk/log.param 
+ -o chains/invMass_garani_superupdate 
+ -c chains/invMass_prios_mpk/invMass_prios_mpk.covmat
+  --superupdate 20 --parallel-chains -j fast  --silent -N 180000
