@@ -3,6 +3,8 @@ core.*
 *~
 *swp
 
+*.json
+
 # Files created by mac
 *.DS_Store
 
