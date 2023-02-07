@@ -30,7 +30,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cert_path=os.path.join(os.path.expanduser("~"),'montepython',"montepythonmonitor-firebase-adminsdk-3c41y-9afd053eea.json")
+cert_path=os.path.join(os.path.expanduser("~"),'montepython',"montepythonmonitor-firebase-adminsdk-ftvzw-ba2be1d5dc.json")
 cred = credentials.Certificate(cert_path)
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://montepythonmonitor-default-rtdb.europe-west1.firebasedatabase.app/'
