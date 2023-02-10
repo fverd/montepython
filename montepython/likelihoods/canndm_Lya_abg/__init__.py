@@ -433,7 +433,7 @@ class canndm_Lya_abg(Likelihood):
                 bin_file.write('\n')
                 bin_file.close()
             sys.stderr.write('#Error_cosmo\n')
-           # print('neff='+str(neff)+'min='+str(self.zind_param_min[2])+'max='+str(self.zind_param_max[2]))
+            #print('neff='+str(neff)+'min='+str(self.zind_param_min[2])+'max='+str(self.zind_param_max[2]))
             sys.stderr.flush()
             return data.boundary_loglike
 

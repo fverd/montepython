@@ -14,8 +14,12 @@ data.experiments=['canndm_Lya_abg']
 
 #
 # Cosmological parameters list
-data.parameters['inv_M_wdm_keV']   = [0.5, 0,1, 2 , 1,   'cosmo']
-data.parameters['log10sigmaovermass']   = [-5, -8,-3, 1 ,1,   'cosmo']
+data.parameters['log10sigmaovermass']   = [-8, -8,-3, 1 ,1,   'cosmo']
+
+#A convenient way to set fixed mass at 0.3 keV
+self.cosmo_arguments['aNR'] = 2.6458342047792336e-08
+self.cosmo_arguments['T_ncdm']= 0.10079368399158986
+self.cosmo_arguments['m_ncdm']= 4000
 
 
 data.cosmo_arguments['selfinteraction'] = 'y'

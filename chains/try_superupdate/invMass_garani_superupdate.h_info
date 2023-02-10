@@ -1,0 +1,21 @@
+ param names	:  M_{wdm}^{-1}  \log_{10}{\sigma / m}
+ R-1 values	:  0.002993	 0.010346	
+ Best Fit  	:  8.193192e-02	-3.687723e+00	
+ mean      	:  1.110659e-01	-5.517625e+00	
+ sigma     	:  4.923978e-02	 nan	
+
+ 1-sigma - 	: -7.397846e-02	 nan	
+ 1-sigma + 	:  2.450110e-02	 nan	
+ 2-sigma - 	: -8.159986e-02	 nan	
+ 2-sigma + 	:  1.164763e-01	 nan	
+ 3-sigma - 	: -8.159986e-02	 nan	
+ 3-sigma + 	:  1.951474e-01	 nan	
+
+ 1-sigma > 	:  3.708744e-02	 nan	
+ 1-sigma < 	:  1.355670e-01	 nan	
+ 2-sigma > 	:  2.946604e-02	 nan	
+ 2-sigma < 	:  2.275422e-01	 nan	
+ 3-sigma > 	:  2.946604e-02	 nan	
+ 3-sigma < 	:  3.062133e-01	 nan	
+ 95% > 	:  2.946604e-02	 nan	
+ 95% < 	:  2.240738e-01	 nan	

@@ -24,7 +24,7 @@ dmcannCDM = Class()
 # pass input parameters
 dmcannCDM.set(common_settings)
 
-mWDM = 3640
+mWDM = 3000
 
 astar = 1.68e-7 *(mWDM/1000)**(-4/3)
 dmcannCDM.set({
@@ -33,11 +33,12 @@ dmcannCDM.set({
     'omega_ncdm': 0.12,
     'N_ncdm':1,
     'T_ncdm' : 0.16*( 1000/ mWDM)**(1./3.),
-    'selfinteraction':'n',
+    'selfinteraction':'y',
     #'ncdm_psd_parameters': '1 , 0.0 , 1.0 , 0.0 , 0.0 , 1.0 ', ## fermi- dirac here
-    'ncdm_psd_parameters': '1 , 1, 0 ,0', ## fermi- dirac here
-    #'aNR': astar,
-    #'sigmaovermass':0.1,
+    'ncdm_psd_parameters': '0.23, 0, 0.126 ,-1',
+    'aNR': astar,
+    'sigmaovermass':1.e-5,
+    'm_ncdm':mWDM
 })
 dmcannCDM.set({
     'tol_ncdm':1.e-6,

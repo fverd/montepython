@@ -6,7 +6,7 @@ info.ticksize=8
 info.ticknumber=5
 info.linesize=1.5
 
-info.force_limits = {'$M_{wdm}^{-1}$':[0.1,0.4]}
+#info.force_limits = {'$M_{wdm}^{-1}$':[0.1,0.4]}
 
 #Following values reccomended by plot_files/example.plot
 info.posterior_smoothing=0
